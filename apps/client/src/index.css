@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}
+
+.fw-b{
+  font-weight: bolder;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
