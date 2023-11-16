@@ -4,6 +4,7 @@
 
 #Instrucciones sobre cómo instalar y ejecutar el proyecto localmente.
 
+    Nota: se requiere que tenga instalado node js en la version 20.8.1 o superior
     1. clonar el repositorio:
         - abrir una terminal de comandos y navegar a la ruta donde quiere almacenar el repositorio
         - escribir: git clone https://github.com/iutria/chameleon
@@ -33,6 +34,11 @@
 #Despliegue
 
     La aplicación fue desplegada usando el servicio de GitHub Pages. Accede a https://iutria.github.io/chameleon/ para ver la aplicación.
+
+    1. para el despliegue se instaló el paquete gh-pages
+    2. se agregó en vite.config.js la siguiente linea de codigo: base: '/chameleon/',
+    3. en el packaje.json dentro de escripts se agregó lo siguiente: "deploy": "gh-pages -d dist"
+    4. para el despliegue se escribe el terminal npm run build, y luego npm run deploy
 
 #funcionamiento
 
