@@ -1,13 +1,16 @@
 import {Formik, useFormik} from 'formik';
 import React, { useEffect } from 'react'
 import {useNavigate} from 'react-router-dom'
+import { useForm } from '../../states/store.state';
 
-const FormSearch= ({values}) => {
+const FormSearch= () => {
     
     const navigate = useNavigate();
 
+    const { formValues } = useForm();
+
     const handleSubmmit = (values)=>{
-        const type = values.type;
+        const type = values.type == '' ? 'photo' : values.type;
         const q = values.search == '' ? 'all' : values.search;
         navigate(`/search/${type}/${q}`)
     }
@@ -19,10 +22,8 @@ const FormSearch= ({values}) => {
 
     useEffect(
         ()=>{
-            if(values){
-                formik.setValues(values)
-            }
-        },[]
+            formik.setValues(formValues);
+        },[formValues]
     )
 
     return (

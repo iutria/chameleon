@@ -15,9 +15,11 @@
         "preview": {
             "dependsOn": [
                 "^preview"
-            ],
-            "outputs": [
-                "dist/**"
+            ]
+        },
+        "deploy": {
+            "dependsOn": [
+                "^deploy"
             ]
         }
     }

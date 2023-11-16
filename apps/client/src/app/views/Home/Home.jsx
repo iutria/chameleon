@@ -5,17 +5,19 @@ import NavBar from '../../components/NavBar/NavBar';
 import FormSearch from '../../components/FormSearchBanner/FormSearch';
 import ImageList from '../../components/ImageList/ImageList';
 import { ImageContext } from '../../contexts/ImageContext';
+import { useForm } from '../../states/store.state';
 
 const Home = () => {
 
   const location = useLocation()
 
   const { loadHome } = useContext(ImageContext)
-  
+  const { setFormData } = useForm()
 
   useEffect(
     ()=>{
       loadHome(location.pathname.split('/').pop())
+      setFormData({type: '', search: ''})
     },[location.pathname]
   )
   

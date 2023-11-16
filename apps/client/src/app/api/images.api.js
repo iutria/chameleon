@@ -43,8 +43,8 @@ export const getImageIdApi = async(id)=>{
                 id
             }
         });     
-        return resp.data.hits
+        return resp.data.hits[0]
     } catch (error) {
-        return []
+        return null
     }
 }

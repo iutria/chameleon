@@ -15,3 +15,7 @@
 .cursor-pointer{
   cursor: pointer;
 }
+
+.td-none{
+  text-decoration: none;
+}

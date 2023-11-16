@@ -1,26 +1,22 @@
 import React from 'react'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Home from '../views/Home/Home'
-import ImageList from '../components/ImageList/ImageList'
 import Search from '../views/Search/Search'
 import Page404 from '../views/Page404/Page404'
-import Image from '../views/Image/Image'
+import ImageDetails from '../views/ImageDetails/ImageDetails'
+
 
 const RoutesApp = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={ <Home /> } >             
-                    <Route path='/photo' element={ <Home /> } />                
-                    <Route path='/illustration' element={ <Home /> } />                
-                    <Route path='/vector' element={ <Home /> } />                
-                </Route>
-                <Route path='/search/:type/:q' element={ <Search />} />
-                <Route path='/image/:id' element={ <Image/>}/>
-                <Route path='*' element={ <Page404/> } />
-            </Routes>
-        </BrowserRouter>
-    )
+    const router = createHashRouter([
+        { path: '/', element: <Home /> },
+        { path: '/photo', element: <Home /> },
+        { path: '/illustration', element: <Home /> },
+        { path: '/vector', element: <Home /> },
+        { path: '/search/:type/:q', element: <Search /> },
+        { path: '/image/:id', element: <ImageDetails/> },
+        { path: '*', element: <Page404 /> },
+    ])
+    return <RouterProvider router={router} />
 }
 
 export default RoutesApp

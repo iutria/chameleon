@@ -5,9 +5,9 @@ import './navbar.css'
 const NavBar = () => {
 
   const links = [
-    {to:'', icon: 'camera', text: 'photos'},
-    {to:'illustration', icon: 'brush', text: 'illustrations'},
-    {to:'vector', icon: 'vector-pen', text: 'vectors'}
+    {to:'/', icon: 'camera', text: 'photos'},
+    {to:'/illustration', icon: 'brush', text: 'illustrations'},
+    {to:'/vector', icon: 'vector-pen', text: 'vectors'}
   ];
 
   return <nav id='menu' className='d-flex center p-2'>

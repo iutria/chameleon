@@ -11,12 +11,22 @@ export const useListImage = create(
     )
 )
 
+export const useImage = create(
+    (set) => (
+        {
+            image: null,
+            isLoadingImage: false,
+            setImage: (data) => (set((state) => ({ image: data }))),
+            setLoadingImage: (loading) => (set((state) => ({ isLoadingImage: loading })))
+        }
+    )
+)
+
 export const useForm = create(
     (set) => (
         {
-            type: '',
-            search: '',
-            setFormData: (data) => (set((state) => (data)))
+            formValues: {type: '', search: ''},
+            setFormData: (data) => (set((state) => ({formValues: data})))
         }
     )
 )
