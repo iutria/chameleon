@@ -8,7 +8,7 @@
     1. clonar el repositorio:
         - abrir una terminal de comandos y navegar a la ruta donde quiere almacenar el repositorio
         - escribir: git clone https://github.com/iutria/chameleon
-    2. inspalar paquetes npm
+    2. instalar paquetes npm
         - una vez clonado el repositorio navevar a la cerpeta ./chameleon
         - cd .\chameleon\
         - escribir el siguiente comando: npm i
